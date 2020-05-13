@@ -1,0 +1,273 @@
+/* 超大屏幕 */
+
+@media screen and (min-width:1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+
+/* 中等屏幕md */
+
+@media screen and (max-width:1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+
+/* 平板sm */
+
+@media screen and (max-width: 991px) {
+    .logo div:nth-child(2) {
+        font-size: 20px!important;
+        margin-bottom: 20px;
+    }
+    .logo {
+        height: 380px!important;
+        padding: 15px 0!important;
+    }
+    .middle h2 {
+        font-size: 35px!important;
+        color: #333333;
+    }
+    .middle p {
+        font-size: 18px!important;
+        color: #555555;
+    }
+    .link {
+        font-size: 16px!important;
+    }
+    .box {
+        padding: 0 20px;
+    }
+}
+a:hover{
+    color: white;
+
+}
+
+/* 最小的屏幕xs */
+
+@media screen and (max-width: 767px) {
+    .logo div:nth-child(2) {
+        font-size: 16px!important;
+        margin-bottom: 20px;
+    }
+    .logo {
+        height: 380px!important;
+        padding: 15px 0!important;
+    }
+    .link,
+    .logo div:nth-child(3) {
+        width: 150px!important;
+        height: 40px!important;
+        line-height: 40px!important;
+    }
+    .middle h2 {
+        font-size: 30px!important;
+        color: #333333;
+    }
+    .middle p {
+        font-size: 16px!important;
+        color: #555555;
+    }
+    .link {
+        font-size: 16px!important;
+    }
+    .box {
+        padding: 0 20px;
+    }
+}
+/*公共部分*/
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+.body {
+    margin: auto;
+}
+
+/*导航栏*/
+nav {
+    margin-bottom: -1px;
+}
+
+nav ul {
+    height: 50px;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+a:hover {
+
+    text-decoration: none;
+}
+
+nav ul li {
+    width: 100px;
+    text-decoration: none;
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    line-height: 50px;
+}
+
+body {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+nav ul li a {
+    color: #5c4282;
+    font-size: 14px;
+}
+
+nav ul li:nth-child(1) {
+    width: 150px;
+}
+
+nav ul a :nth-child(1) {
+    font-size: 18px;
+}
+
+nav ul li:nth-child(7) {
+    float: right;
+}
+
+nav ul li:nth-child(8) {
+    float: right;
+    margin-right: -20px;
+}
+
+nav ul li:hover {
+    background-color: #e2e1e1;
+}
+
+.logo {
+    padding: 0 100px;
+    height: 570px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: #604687;
+    text-align: center;
+}
+
+.logo div {
+    margin: 0 auto;
+    color: #e2e1e1;
+}
+
+.logo div:nth-child(1) {
+    width: 284px;
+    height: 142px;
+    line-height: 144px;
+    font-size: 80px;
+    border-radius: 20px;
+    border: #e2e1e1 1px solid;
+    margin-bottom: 30px;
+}
+
+.logo div:nth-child(2) {
+    font-size: 30px;
+    width: 60%;
+    margin-bottom: 30px;
+}
+
+.link,
+.logo div:nth-child(3) {
+    width: 200px;
+    height: 58px;
+    line-height: 58px;
+    font-size: 28x;
+    border-radius: 5px;
+    border: #e2e1e1 1px solid;
+    margin-bottom: 30px;
+}
+
+.link,
+.logo div:nth-child(3):hover {
+    color: #604687;
+    background-color: #fff;
+}
+
+.middle {
+    margin-top: 30px;
+    margin-bottom: -30px;
+    height: 255px;
+    text-align: center;
+    font-size: 30px;
+    color: #5c4282;
+}
+
+.middle h2 {
+    font-size: 40px;
+    color: #333333;
+}
+
+.middle p {
+    font-size: 21px;
+    color: #555555;
+}
+
+hr {
+    width: 20%;
+    border-top: 1px solid #eee;
+}
+
+.tips {
+    height: 311px;
+    text-align: center;
+    font-size: 30px;
+    /* background-color: purple; */
+}
+
+.tips img {
+    width: 100%;
+}
+
+.tips h3 {
+    color: #2a2730;
+}
+
+.tips p {
+    font-size: 16px;
+}
+
+.link {
+    margin: 20px auto;
+    font-size: 21px;
+}
+
+.link:hover {
+    color: #e2e1e1;
+    background-color: #604687;
+}
+
+.bottom {
+    margin-top: 50px;
+    height: 178px;
+    color: #99979c;
+    padding: 50px 0px;
+    background-color: #2a2730;
+}
+
+.bottom li {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.bottom a {
+    color: #e2e1e1;
+}

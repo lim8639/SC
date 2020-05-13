@@ -1,0 +1,265 @@
+<%--
+  Created by IntelliJ IDEA.
+  User: julien
+  Date: 2020/5/10
+  Time: 10:44
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>电子商务时创项目</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="shortcut icon" href="pic/20200229113138326_easyicon_net_64.ico" type="image/x-icon">
+    <script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+    <script>
+        $(function(){
+            $("#btn").click(function(){
+                //getJSON 默认使用get方法，比get 和post 少一个参数，即数据传输回来的类型。
+                $.getJSON("http://localhost:8080/mytime/loginServlet","action=login&"+$("#fro").serialize(),function (data) {
+                    alert(data.login);
+                    if (data.login>0){
+                        $(location).attr('href', '#');
+                    }else {
+                        alert("密码错误");
+                    }
+                });
+            });
+        });
+    </script>
+    <style>
+        /* 超大屏幕 */
+
+        @media screen and (min-width:1280px) {
+            .container {
+                max-width: 1280px;
+            }
+        }
+
+
+        /* 中等屏幕md */
+
+        @media screen and (max-width:1280px) {
+            .container {
+                max-width: 1280px;
+            }
+        }
+
+
+        /* 平板sm */
+
+        @media screen and (max-width: 991px) {
+
+            .middle h2 {
+                font-size: 35px!important;
+                color: #333333;
+            }
+            .middle p {
+                font-size: 18px!important;
+                color: #555555;
+            }
+            .link {
+                font-size: 16px!important;
+            }
+            .box {
+                padding: 0 20px;
+            }
+        }
+
+
+        /* 最小的屏幕xs */
+
+        @media screen and (max-width: 767px) {
+
+            .middle h2 {
+                font-size: 30px!important;
+                color: #333333;
+            }
+            .middle p {
+                font-size: 16px!important;
+                color: #555555;
+            }
+            .link {
+                font-size: 16px!important;
+            }
+            .box {
+                padding: 0 20px;
+            }
+        }
+
+        /*公共部分*/
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        li {
+            list-style: none;
+            text-decoration: none;
+        }
+
+        .body {
+            margin: auto;
+        }
+
+        nav {
+            margin-bottom: -1px;
+        }
+
+        nav ul {
+            height: 50px;
+        }
+
+        a {
+            text-decoration: none;
+            list-style: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+
+        /*导航栏*/
+        nav ul li {
+            width: 100px;
+            text-decoration: none;
+            float: left;
+            text-align: center;
+            font-size: 14px;
+            line-height: 50px;
+        }
+
+        body {
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+        }
+
+        nav ul li a {
+            color: #5c4282;
+            font-size: 14px;
+        }
+
+        nav ul li:nth-child(1) {
+            width: 150px;
+        }
+
+        nav ul a :nth-child(1) {
+            font-size: 18px;
+        }
+
+        nav ul li:nth-child(7) {
+            float: right;
+        }
+
+        nav ul li:nth-child(8) {
+            float: right;
+            margin-right: -20px;
+        }
+
+        nav ul li:hover {
+            background-color: #e2e1e1;
+        }
+
+        /*主体部分*/
+        .login{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+
+        /*底部*/
+
+        .bottom {
+            margin-top: 50px;
+            height: 178px;
+            color: #99979c;
+            padding: 50px 0px;
+            background-color: #2a2730;
+        }
+
+        .bottom li {
+            margin-bottom: 20px;
+            margin-right: 20px;
+            font-size: 16px;
+            display: inline-block;
+        }
+
+        .bottom a {
+            color: #e2e1e1;
+        }
+    </style>
+</head>
+
+<body>
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<nav>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class=""><a href="http://<%request.getServerName();%>:8080/time/indexServlet?action=toIndex">TimeManeger</a></li>
+                <li class="hidden-xs"><a href="#">时创项目</a></li>
+                <li class="hidden-xs"><a href="#">时创项目</a></li>
+                <li class="hidden-xs hidden-sm"><a href="#">时创项目</a></li>
+                <li class="hidden-xs hidden-sm"><a href="#">时创项目</a></li>
+                <li class="hidden-xs hidden-sm"><a href="#">时创项目</a></li>
+                <li class="hidden-xs hidden-sm"><a href="http://<%request.getServerName();%>:8080/time/main/mainServlet?action=show">个人中心</a></li>
+                <li class="visible-xs visible-sm">
+                    <a class="glyphicon glyphicon-th-list" href="http://<%request.getServerName();%>:8080/time/main/mainServlet?action=show"></a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<!--    </from>-->
+<div class="container">
+    <h1>
+        个人中心
+    </h1>
+    <h2 style="color: green">
+        您好！恭喜您登录成功....
+    </h2>
+        <div style="height: 300px;">
+
+        </div>
+</div>
+
+
+<div class="bottom">
+    <div class="container">
+        <div class="row">
+            <ul class="box">
+                <li><a href="#">时创</a></li>
+                <li><a href="#">时创</a></li>
+                <li><a href="#">时创</a></li>
+                <li><a href="#">时创</a></li>
+            </ul>
+            <p class="box">燕山大学电子商务三创赛！</p>
+            <p class="box">时创项目，让高效时间实现美好生活！</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

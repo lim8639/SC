@@ -1,0 +1,161 @@
+/* 超大屏幕 */
+
+@media screen and (min-width:1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+
+/* 中等屏幕md */
+
+@media screen and (max-width:1280px) {
+    .container {
+        max-width: 1280px;
+    }
+}
+
+
+/* 平板sm */
+
+@media screen and (max-width: 991px) {
+
+    .middle h2 {
+        font-size: 35px!important;
+        color: #333333;
+    }
+    .middle p {
+        font-size: 18px!important;
+        color: #555555;
+    }
+    .link {
+        font-size: 16px!important;
+    }
+    .box {
+        padding: 0 20px;
+    }
+}
+
+
+/* 最小的屏幕xs */
+
+@media screen and (max-width: 767px) {
+
+    .middle h2 {
+        font-size: 30px!important;
+        color: #333333;
+    }
+    .middle p {
+        font-size: 16px!important;
+        color: #555555;
+    }
+    .link {
+        font-size: 16px!important;
+    }
+    .box {
+        padding: 0 20px;
+    }
+}
+
+/*公共部分*/
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+li {
+    list-style: none;
+    text-decoration: none;
+}
+
+.body {
+    margin: auto;
+}
+
+nav {
+    margin-bottom: -1px;
+}
+
+nav ul {
+    height: 50px;
+}
+
+a {
+    text-decoration: none;
+    list-style: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/*导航栏*/
+nav ul li {
+    width: 100px;
+    text-decoration: none;
+    float: left;
+    text-align: center;
+    font-size: 14px;
+    line-height: 50px;
+}
+
+body {
+    font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+nav ul li a {
+    color: #5c4282;
+    font-size: 14px;
+}
+
+nav ul li:nth-child(1) {
+    width: 150px;
+}
+
+nav ul a :nth-child(1) {
+    font-size: 18px;
+}
+
+nav ul li:nth-child(7) {
+    float: right;
+}
+
+nav ul li:nth-child(8) {
+    float: right;
+    margin-right: -20px;
+}
+
+nav ul li:hover {
+    background-color: #e2e1e1;
+}
+
+/*主体部分*/
+.login{
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+}
+
+
+/*底部*/
+
+.bottom {
+    margin-top: 50px;
+    height: 178px;
+    color: #99979c;
+    padding: 50px 0px;
+    background-color: #2a2730;
+}
+
+.bottom li {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.bottom a {
+    color: #e2e1e1;
+}
