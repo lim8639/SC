@@ -48,8 +48,8 @@
   <div class="container">
     <div class="row">
       <ul>
-        <li class=""><a href="http://<%request.getServerName();%>:8080/time/indexServlet?action=toIndex">TimeManeger</a></li>
-        <li class="hidden-xs"><a href="#">时创项目</a></li>
+        <li class=""><a href="http://localhost:8080/time/indexServlet?action=toIndex">TimeManeger</a></li>
+        <li class="hidden-xs"><a href="work.html">工作后台</a></li>
         <li class="hidden-xs"><a href="#">时创项目</a></li>
         <li class="hidden-xs hidden-sm"><a href="#">时创项目</a></li>
         <li class="hidden-xs hidden-sm"><a href="#">时创项目</a></li>
@@ -57,7 +57,7 @@
 
         <li class="hidden-xs hidden-sm"><a href="http://localhost:8080/time/main/mainServlet?action=show">个人中心</a></li>
         <li class="visible-xs visible-sm">
-          <a class="glyphicon glyphicon-th-list" href="http://<%request.getServerName(); %>:8080/time/main/mainServlet?action=show"></a>
+          <a class="glyphicon glyphicon-th-list" href="http://localhost:8080/time/main/mainServlet?action=show"></a>
         </li>
       </ul>
     </div>
@@ -111,7 +111,7 @@
         <p>时创平台，是一个帮助您管理时间，提高时间效率的强大工具，高效生活，即将从这里开始!</p>
       </div>
 
-      <a href="http://<%request.getServerName();%>:8080/time/main/mainServlet?action=show"><div class="link">
+      <a href="http://loaclhost:8080/time/main/mainServlet?action=show"><div class="link">
         前往个人中心>>
       </div></a>
     </div>

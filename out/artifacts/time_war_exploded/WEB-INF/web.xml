@@ -44,7 +44,17 @@
         <servlet-name>mainServlet</servlet-name>
         <url-pattern>/main/mainServlet</url-pattern>
     </servlet-mapping>
-
+    <!--   工作后台-->
+    <servlet>
+        <servlet-name>TextServlet</servlet-name>
+        <servlet-class>
+            web.TextServlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>TextServlet</servlet-name>
+        <url-pattern>/textServlet</url-pattern>
+    </servlet-mapping>
 <!--    过滤器-->
     <filter>
         <filter-name>myFitler</filter-name>
