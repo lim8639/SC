@@ -6,7 +6,7 @@
 <!--    首页跳转登录-->
     <servlet>
         <servlet-name>indexServlet</servlet-name>
-        <servlet-class>web.IndexServlet</servlet-class>
+        <servlet-class>com.julien.web.IndexServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>indexServlet</servlet-name>
@@ -16,7 +16,7 @@
 <!--    下载-->
     <servlet>
         <servlet-name>download</servlet-name>
-        <servlet-class>web.Download</servlet-class>
+        <servlet-class>com.julien.web.Download</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>download</servlet-name>
@@ -26,7 +26,7 @@
 <!--    登录-->
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
-        <servlet-class>web.LoginServlet</servlet-class>
+        <servlet-class>com.julien.web.LoginServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
@@ -37,28 +37,31 @@
     <servlet>
         <servlet-name>mainServlet</servlet-name>
         <servlet-class>
-            web.MainServlet
+            com.julien.web.MainServlet
         </servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>mainServlet</servlet-name>
         <url-pattern>/main/mainServlet</url-pattern>
     </servlet-mapping>
-    <!--   工作后台-->
+
+
+<!--   工作后台-->
     <servlet>
         <servlet-name>TextServlet</servlet-name>
         <servlet-class>
-            web.TextServlet
+            com.julien.web.TextServlet
         </servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>TextServlet</servlet-name>
         <url-pattern>/textServlet</url-pattern>
     </servlet-mapping>
+
 <!--    过滤器-->
     <filter>
         <filter-name>myFitler</filter-name>
-        <filter-class>web.MyFitler</filter-class>
+        <filter-class>com.julien.web.MyFitler</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>myFitler</filter-name>

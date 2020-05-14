@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <title>后台快速工作界面</title>
@@ -49,17 +49,15 @@
     <script>
         $(function () {
             $.getJSON("http://localhost:8080/time/textServlet?","action=getText",function (data) {
-
-                     for(var p in data){//遍历json对象的每个key/value对,p为key
-                         //p + " " + data[p]
-                         $("#showtext").append("<div class=\"page\">\n" +
-                             "\n" +
-                             "                <img src=\"file/Mark.png\" alt=\"hello\">\n" +
-                             "                <h3>\n@" +
-                             data.username +
-                             "                </h3>\n" +
-                   data.password+          "            </div>");
-                     }
+                for (var i = 0; i < data.length; i++) {
+                    $("#showtext").append("<div class=\"page\">\n" +
+                        "\n" +
+                        "                <img src=\"file/Mark.png\" alt=\"hello\">\n" +
+                        "                <h3>\n@" +
+                        data[i].username+
+                        "                </h3>\n" +
+                        data[i].text+          "            </div>");
+                }
              });
         });
     </script>
@@ -111,8 +109,8 @@
 
             <h2>管理后台</h2>
             <ul>
-                <li><button id="btn" class="btn btn-default">text </button></li>
-                <li><a target="_blank" href="index.jsp" class="btn btn-default" role="button">返回首页</a></li>
+                <li><button id="btn" class="btn btn-default">com.julien.text </button></li>
+                <li><a target="_blank" href="index.html" class="btn btn-default" role="button">返回首页</a></li>
                 <li><a target="_blank" href="http://47.92.216.98:19999" class="btn btn-default" role="button">服务器参数</a></li>
                 <li><a target="_blank" href="https://github.com/lim8639/SC" class="btn btn-default" role="button">GitHub代码仓库</a></li>
                 <li><a target="_blank" href="https://service-rzn6yqlg-1258218517.gz.apigw.tencentcs.com/release/hello/myone/" class="btn btn-default" role="button">OneDrive5TB云盘</a></li>
@@ -132,8 +130,8 @@
                 function subclick() {
                     $.get("http://localhost:8080/time/textServlet?","action=saveText&"+$("#fro").serialize(),
                     function (data) {
-                        data
-                    },"text");
+                        alert("服务器回传:"+data+"!! 刷新网页可见");
+                    },"text")
                 }
             </script>
             <form action="" id="fro">
@@ -147,13 +145,6 @@
         </div>
         <div id ="showtext" class="col-md-4 col-lg-4">
             <h2 >留言墙 <small><a href="#">快速跳转留言板</a></small></h2>
-            <div class="page">
-
-                <img src="file/Mark.png" alt="hello">
-                <h3>
-                    @julien
-                </h3>
-            </div>
         </div>
     </div>
 </div>
