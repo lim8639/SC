@@ -48,7 +48,7 @@
     </style>
     <script>
         $(function () {
-            $.getJSON("http://localhost:8080/time/textServlet?","action=getText",function (data) {
+            $.getJSON("http://"+document.location.hostname+":8080/time/textServlet?","action=getText",function (data) {
                 for (var i = 0; i < data.length; i++) {
                     $("#showtext").append("<div class=\"page\">\n" +
                         "\n" +
@@ -109,8 +109,8 @@
 
             <h2>管理后台</h2>
             <ul>
-                <li><button id="btn" class="btn btn-default">com.julien.text </button></li>
                 <li><a target="_blank" href="index.html" class="btn btn-default" role="button">返回首页</a></li>
+                <li><a target="_blank" href="test.html" class="btn btn-default" role="button">测试页面</a></li>
                 <li><a target="_blank" href="http://47.92.216.98:19999" class="btn btn-default" role="button">服务器参数</a></li>
                 <li><a target="_blank" href="https://github.com/lim8639/SC" class="btn btn-default" role="button">GitHub代码仓库</a></li>
                 <li><a target="_blank" href="https://service-rzn6yqlg-1258218517.gz.apigw.tencentcs.com/release/hello/myone/" class="btn btn-default" role="button">OneDrive5TB云盘</a></li>
@@ -128,17 +128,21 @@
         <div id ="text" class="col-md-4 col-lg-4">
             <script>
                 function subclick() {
-                    $.get("http://localhost:8080/time/textServlet?","action=saveText&"+$("#fro").serialize(),
+                    if ($("#mytext").val()===""&&$("#user").val()===""){
+                        alert("请输入完整信息!");
+                        return false;
+                    }
+                    $.get("http://"+document.location.hostname+":8080/time/textServlet?","action=saveText&"+$("#fro").serialize(),
                     function (data) {
-                        alert("服务器回传:"+data+"!! 刷新网页可见");
+                        window.location.reload();
                     },"text")
                 }
             </script>
             <form action="" id="fro">
                 留言内容:
-                <textarea class="form-control" name="text" rows="8"></textarea>
+                <textarea class="form-control" id="mytext" name="text" rows="8"></textarea>
                 留言名字：
-                <input type="text" name="username"/>
+                <input type="text" id="user" name="username"/>
                 <input type="hidden" name="time" />
                 <div class="btn btn—default"  id="btn_sub" role="button" onclick="subclick()">submit</div>
             </form>

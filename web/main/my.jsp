@@ -1,5 +1,7 @@
+<%@ page contentType="com.julien.text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,11 +15,17 @@
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
     <!--[if lt IE 9]>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="pic/20200229113138326_easyicon_net_64.ico" type="image/x-icon">
+
+    <link rel="shortcut icon" href="../pic/20200229113138326_easyicon_net_64.ico" type="image/x-icon">
+    <script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
+    <script>
+        $(function(){
+
+        });
+    </script>
     <style>
         /* 超大屏幕 */
 
@@ -35,6 +43,8 @@
                 max-width: 1280px;
             }
         }
+
+
         /* 平板sm */
 
         @media screen and (max-width: 991px) {
@@ -179,65 +189,46 @@
             color: #e2e1e1;
         }
     </style>
-    <script src="http://lib.sinaapp.com/js/jquery/2.0.2/jquery-2.0.2.min.js"></script>
-
 </head>
+
 <body>
 <!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
 <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 <!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
-<nav style="box-shadow: #5c4282 1px 1px ;">
+<nav>
     <div class="container">
         <div class="row">
             <ul>
                 <li class=""><a href="../index.html">TimeManeger</a></li>
+                <li class="hidden-xs"><a href="../work.html">后台工作</a></li>
                 <li class="hidden-xs"><a href="#">时创项目</a></li>
-                <li class="hidden-xs"><a href="#">时创项目</a></li>
                 <li class="hidden-xs hidden-sm"><a href="#">时创项目</a></li>
                 <li class="hidden-xs hidden-sm"><a href="#">时创项目</a></li>
                 <li class="hidden-xs hidden-sm"><a href="#">时创项目</a></li>
-                <li class="hidden-xs hidden-sm"><a href="../main/hello.html">个人中心</a></li>
+                <li class="hidden-xs hidden-sm"><a href="#">个人中心</a></li>
                 <li class="visible-xs visible-sm">
-                    <a class="glyphicon glyphicon-th-list" href="../main/hello.html"></a>
+                    <a class="glyphicon glyphicon-th-list" href="#"></a>
                 </li>
             </ul>
+
         </div>
     </div>
 </nav>
 
-<!--   登录表单 </from>-->
-
-
 <div class="container">
-    <div class="row">
-        <div  style="padding: 0 10px 50px;margin-top: 30px;box-shadow: #5c4282 2px 2px;border: #5c4282 1px solid;" class="col-lg-4 col-md-4 col-sm-8 col-xs-10 col-md-offset-4 col-sm-offset-2 col-lg-offset-4 col-xs-offset-1">
-            <h1 style="text-align: center">
-                Welcome Back!
-            </h1>
-            <script>
-                function logion() {
+    <h1>
+        个人中心
+    </h1>
+    <h2 style="color: green">
+        您好！恭喜您登录成功....
+    </h2>
+    <div style="height: 300px;">
 
-                    $.get("http://"+document.location.hostname+":8080/time/loginServlet?","action=login&"+$("#fro").serialize(),function (data) {
-                        window.location.reload();
-                });
-                }
-            </script>
-            <form  id="fro">
-                <div class="form-group">
-                    <label for="exampleInputName2">UserName</label>
-                    <input type="text" class="form-control" name="username" id="exampleInputName2" placeholder="UserName">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <input type="hidden" name="action" value="login" />
-            </form>
-            <button onclick="logion()" class="btn btn-default" >Sign In>></button>
-        </div>
     </div>
 </div>
+
+
 <div class="bottom">
     <div class="container">
         <div class="row">

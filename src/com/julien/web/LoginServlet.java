@@ -22,22 +22,21 @@ public class LoginServlet extends BaseSevlet{
      * @throws IOException
      */
     protected void login(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
         //获取参数
         String username = req.getParameter("username");
         String password = req.getParameter("password");
         System.out.println("username = " + username);
         System.out.println("password = " + password);
-        System.out.println( "+++++++++++++++++++++++++++++++++++ ");
+            req.setCharacterEncoding("UTF-8");
         //判断登录
-        if ("admin".equals(username)&&("admin".equals(password))){
+        if ("admin".equals(username)&&"admin".equals(password)){
             req.getSession().setAttribute("username",username);
             resp.getWriter().write("1");
             System.out.println("登录成功，过滤器已经放行");
-            req.getRequestDispatcher("/main/hello.html").forward(req,resp);
-        }else{
+        }else
             System.out.println("登陆失败");
+            req.getRequestDispatcher("/login/login.html").forward(req,resp);
             resp.getWriter().write("0");
         }
-    }
+
 }
