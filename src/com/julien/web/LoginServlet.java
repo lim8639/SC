@@ -31,12 +31,12 @@ public class LoginServlet extends BaseSevlet{
         //ÅÐ¶ÏµÇÂ¼
         if ("admin".equals(username)&&"admin".equals(password)){
             req.getSession().setAttribute("username",username);
+            resp.setCharacterEncoding("UTF-8");
             resp.getWriter().write("1");
             System.out.println("µÇÂ¼³É¹¦£¬¹ýÂËÆ÷ÒÑ¾­·ÅÐÐ");
         }else
+            resp.setCharacterEncoding("UTF-8");
             System.out.println("µÇÂ½Ê§°Ü");
-            req.getRequestDispatcher("/login/login.html").forward(req,resp);
             resp.getWriter().write("0");
         }
-
 }

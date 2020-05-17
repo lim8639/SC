@@ -27,7 +27,6 @@
             }
         }
 
-
         /* 中等屏幕md */
 
         @media screen and (max-width:1280px) {
@@ -218,8 +217,13 @@
             <script>
                 function logion() {
 
-                    $.get("http://"+document.location.hostname+":8080/time/loginServlet?","action=login&"+$("#fro").serialize(),function (data) {
-                        window.location.reload();
+                    $.get("http://"+document.location.hostname+":8080/time/loginServlet?",$("#fro").serialize(),function (data) {
+                        if (data>0){
+                            alert("登录成功 响应代码"+data);
+                            window.location.reload();
+                        }else{
+                            alert("密码错误，请重新登录！！响应代码："+data);
+                        }
                 });
                 }
             </script>
@@ -234,9 +238,12 @@
                 </div>
                 <input type="hidden" name="action" value="login" />
             </form>
-            <button onclick="logion()" class="btn btn-default" >Sign In>></button>
-        </div>
+              <button onclick="logion()" class="btn btn-default">Sign In>></button>
+
     </div>
+</div>
+<div style="height: 200px">
+    
 </div>
 <div class="bottom">
     <div class="container">

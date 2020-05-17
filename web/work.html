@@ -24,11 +24,15 @@
            margin-top: 10px!important;
         }
         .page{
+            align-self: center;
             margin-bottom: 10px;
             box-shadow: rgba(26,27,240,0.2) 2px 2px ;
             position: relative;
-            height: 200px;
+            padding: 20px 20px 30px;
             border:1px solid darkmagenta;
+        }
+        .page frame{
+            width: 1000px;
         }
         .page h3{
             margin-top: 10px;
@@ -105,7 +109,8 @@
                 <p> 本页面保存了一些简单的工作链接，页面下方支持留言，祝愿我们的时创项目圆满成功！</p>
             </blockquote>
         </h1>
-        <div class="col-lg-5 col-md-5 col-sm-8 col-xm-10 col-md-offset-1 col-lg-offset-1 ">
+
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xm-12 ">
 
             <h2>管理后台</h2>
             <ul>
@@ -115,7 +120,6 @@
                 <li><a target="_blank" href="https://github.com/lim8639/SC" class="btn btn-default" role="button">GitHub代码仓库</a></li>
                 <li><a target="_blank" href="https://service-rzn6yqlg-1258218517.gz.apigw.tencentcs.com/release/hello/myone/" class="btn btn-default" role="button">OneDrive5TB云盘</a></li>
                 <li><a target="_blank" href="http://47.92.216.98:8888" class="btn btn-default" role="button">服务器后台(非管理员勿入)</a></li>
-
             </ul>
             <h2>快速开发引擎</h2>
             <ul>
@@ -125,7 +129,18 @@
                 <li><a target="_blank" href="#" class="btn btn-default" role="button">服务器后台(非管理员勿入)</a></li>
             </ul>
         </div>
-        <div id ="text" class="col-md-4 col-lg-4">
+        <div style="height: 200px"  class="col-md-4 col-lg-4">
+            <h2>更新内容</h2>
+            <blockquote>
+                <p> 此模块记录更新内容</p>
+            </blockquote>
+            <ol>
+                <li>1、更新json数据传输，取消jsp格式</li>
+                <li>2、新增留言功能</li>
+                <li>3、重新搭建数据库，并且使用远端数据库</li>
+            </ol>
+        </div>
+        <div style="margin-top: 30px" id ="text" class="col-md-4 col-lg-4">
             <script>
                 function subclick() {
                     if ($("#mytext").val()===""&&$("#user").val()===""){
@@ -140,15 +155,15 @@
             </script>
             <form action="" id="fro">
                 留言内容:
-                <textarea class="form-control" id="mytext" name="text" rows="8"></textarea>
+                <textarea class="form-control" id="mytext" name="text" rows="10"></textarea>
                 留言名字：
                 <input type="text" id="user" name="username"/>
                 <input type="hidden" name="time" />
                 <div class="btn btn—default"  id="btn_sub" role="button" onclick="subclick()">submit</div>
             </form>
         </div>
-        <div id ="showtext" class="col-md-4 col-lg-4">
-            <h2 >留言墙 <small><a href="#">快速跳转留言板</a></small></h2>
+        <div id ="showtext" class="col-md-12 col-lg-12">
+            <h2 >留言墙 <small>欢迎留言</small></h2>
         </div>
     </div>
 </div>
