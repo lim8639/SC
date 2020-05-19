@@ -1,6 +1,7 @@
 package com.julien.dao.daoimpl;
 
 import com.julien.dao.BaseDao;
+import com.julien.dao.UserDao;
 import com.julien.pojo.User;
 
 public class UserDaoImpl extends BaseDao implements UserDao {
