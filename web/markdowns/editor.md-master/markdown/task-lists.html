@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="utf-8" />
+    <title>我的编辑器</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/editormd.css" />
+    <link rel="shortcut icon" href="https://pandao.github.io/editor.md/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+    <div id="layout">
+        <header>
+            <h1>这些是什么</h1>
+        </header>
+        <div id="test-editormd">
+            <textarea style="display:none;">
+                    # 妈的智障
+</textarea>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="../editormd.js"></script>
+    <script type="text/javascript">
+        var testEditor;
+        $(function() {
+            testEditor = editormd("test-editormd", {
+                width: "90%",
+                height: 720,
+                taskList: true,
+                path: '../lib/',
+                htmlDebode: true,
+                onload: function() {}
+            });
+        });
+    </script>
+</body>
+
+</html>

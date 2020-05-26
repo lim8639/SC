@@ -11,6 +11,13 @@
         </webroots>
       </configuration>
     </facet>
+    <facet type="hibernate" name="Hibernate">
+      <configuration>
+        <datasource-map />
+        <naming-strategy-map />
+        <deploymentDescriptor name="hibernate.cfg.xml" url="file://$MODULE_DIR$/src/hibernate.cfg.xml" />
+      </configuration>
+    </facet>
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
@@ -36,5 +43,7 @@
     <orderEntry type="library" name="mysql-connector-java-5.1.7-bin" level="project" />
     <orderEntry type="library" name="commons-dbutils-1.3" level="project" />
     <orderEntry type="library" name="commons-dbutils-1.3-sources" level="project" />
+    <orderEntry type="library" name="antlr-2.7.7" level="project" />
+    <orderEntry type="library" name="jaxb-api-2.2.6" level="project" />
   </component>
 </module>
